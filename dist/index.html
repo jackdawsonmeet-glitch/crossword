@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17324d">
+  <meta name="description" content="A friendly daily five-letter word puzzle with large, clear controls. Six guesses, one new word each day.">
+  <title>Daily Letter — A daily word puzzle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="side-menu" id="sideMenu" aria-label="Game menu" aria-hidden="true">
+    <div class="side-menu-head"><strong>Daily Letter</strong><button id="closeMenu" aria-label="Close menu">×</button></div>
+    <nav>
+      <button class="menu-link active" data-menu-action="today"><span>▦</span> Today’s puzzle</button>
+      <button class="menu-link" data-menu-action="hint"><span>✦</span> Get a hint</button>
+      <button class="menu-link" data-menu-action="help"><span>?</span> How to play</button>
+      <button class="menu-link" data-menu-action="stats"><span>▥</span> My statistics</button>
+      <button class="menu-link" data-menu-action="settings"><span>⚙</span> Display settings</button>
+      <button class="menu-link" data-menu-action="quick"><span>✎</span> Ideas &amp; quick help</button>
+      <button class="menu-link" data-menu-action="account"><span>●</span> My account</button>
+    </nav>
+    <p>One new word every day.<br>Your progress is saved on this device.</p>
+  </aside>
+  <div class="menu-scrim" id="menuScrim" hidden></div>
+
+  <section class="ad-banner" aria-label="Top advertisement space">
+    <span>Advertisement</span>
+    <strong>Reserved for your top-center ad</strong>
+    <small>970 × 90</small>
+  </section>
+
+  <header class="topbar">
+    <div class="left-tools"><button class="icon-button menu-button" id="menuButton" aria-label="Open menu"><i></i><i></i><i></i></button><button class="how-to-play" id="helpButton"><span aria-hidden="true">💡</span> How to Play</button></div>
+    <div class="brand" aria-label="Daily Letter">
+      <span class="brand-mark" aria-hidden="true">DL</span>
+      <div><h1>Daily Letter</h1><p>One thoughtful word a day</p></div>
+    </div>
+    <div class="header-tools">
+      <button class="icon-button hint-button" id="hintButton" aria-label="Get a hint">✦</button>
+      <button class="icon-button chart-icon" id="statsButton" aria-label="View statistics"><span></span><span></span><span></span></button>
+      <button class="icon-button settings-button" id="settingsButton" aria-label="Display settings">⚙</button>
+      <button class="quick-help" id="quickHelpButton">Ideas &amp; Quick Help</button>
+      <button class="run-ad" id="runAdButton" aria-label="Run an advertisement">Run Ad</button>
+      <button class="account-button" id="accountButton" aria-label="Open account menu"><span class="account-avatar" id="accountAvatar">A</span><span id="accountLabel">Account</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="game" aria-label="Daily word puzzle">
+      <div class="welcome"><span>Today’s challenge</span><h2>Find the hidden word</h2><p>Six tries. Five letters. Enjoy the challenge.</p></div>
+      <div class="game-meta"><span id="puzzleNumber">Puzzle</span><span aria-hidden="true">•</span><time id="today"></time></div>
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+      <div id="board" class="board" role="grid" aria-label="Guess board"></div>
+      <div id="keyboard" class="keyboard" aria-label="On-screen keyboard"></div>
+    </section>
+  </main>
+
+  <footer>Fresh puzzle every day · Your progress stays on this device</footer>
+
+  <dialog id="adDialog">
+    <button class="close" data-close="adDialog" aria-label="Close advertisement information">×</button>
+    <p class="dialog-kicker">Advertising</p>
+    <h2>Your side ad goes here</h2>
+    <p>This button is ready to connect to your advertising destination or campaign. The top-center banner is also reserved for a standard display ad.</p>
+    <button class="share" data-close="adDialog">Got it</button>
+  </dialog>
+
+  <dialog id="helpDialog">
+    <button class="close" data-close="helpDialog" aria-label="Close instructions">×</button>
+    <h2>How to play</h2>
+    <p>Guess today’s five-letter word in six tries. Each guess must be a valid word.</p>
+    <div class="example"><span class="tile correct">B</span><span class="tile">R</span><span class="tile">A</span><span class="tile">V</span><span class="tile">E</span></div>
+    <p><strong>Green</strong> means the letter is in the right place.</p>
+    <div class="example"><span class="tile">S</span><span class="tile present">M</span><span class="tile">I</span><span class="tile">L</span><span class="tile">E</span></div>
+    <p><strong>Gold</strong> means the letter is in the word, but in another place.</p>
+    <div class="example"><span class="tile">C</span><span class="tile">L</span><span class="tile absent">O</span><span class="tile">U</span><span class="tile">D</span></div>
+    <p><strong>Gray</strong> means the letter is not in the word.</p>
+    <p class="rule">A new puzzle arrives each day at midnight.</p>
+  </dialog>
+
+  <dialog id="statsDialog">
+    <button class="close" data-close="statsDialog" aria-label="Close statistics">×</button>
+    <h2>Your statistics</h2>
+    <div class="stats">
+      <div><strong id="played">0</strong><span>Played</span></div>
+      <div><strong id="winRate">0</strong><span>Win %</span></div>
+      <div><strong id="streak">0</strong><span>Streak</span></div>
+      <div><strong id="best">0</strong><span>Best</span></div>
+    </div>
+    <div id="resultArea" class="result-area" hidden>
+      <p id="resultText"></p>
+      <button class="share" id="shareButton">Share result</button>
+    </div>
+  </dialog>
+  <dialog id="settingsDialog">
+    <button class="close" data-close="settingsDialog" aria-label="Close display settings">×</button>
+    <h2>Display settings</h2>
+    <p>Make the puzzle more comfortable to read.</p>
+    <div class="setting-row"><div><strong>Extra-large type</strong><span>Increase labels and keyboard letters</span></div><button class="toggle" id="largeTypeToggle" role="switch" aria-checked="false"><span></span></button></div>
+    <div class="setting-row"><div><strong>High contrast</strong><span>Use blue and orange result colors</span></div><button class="toggle" id="contrastToggle" role="switch" aria-checked="false"><span></span></button></div>
+    <fieldset class="theme-picker"><legend>Color theme</legend><button class="theme-choice selected" data-theme="classic"><i class="theme-swatch classic"></i><span><strong>Classic</strong><small>Navy, cream and gold</small></span></button><button class="theme-choice" data-theme="ocean"><i class="theme-swatch ocean"></i><span><strong>Ocean</strong><small>Blue, white and coral</small></span></button><button class="theme-choice" data-theme="forest"><i class="theme-swatch forest"></i><span><strong>Forest</strong><small>Green, ivory and copper</small></span></button></fieldset>
+  </dialog>
+  <dialog id="quickHelpDialog">
+    <button class="close" data-close="quickHelpDialog" aria-label="Close quick help">×</button>
+    <p class="dialog-kicker">Ideas &amp; quick help</p><h2>Need a little nudge?</h2>
+    <div class="help-actions"><button id="quickHintAction"><strong>Reveal one letter</strong><span>Use today’s single hint</span></button><button id="rulesAction"><strong>Show the rules</strong><span>See how the colors work</span></button><button id="ideaAction"><strong>Try a word idea</strong><span>Get a starter-word suggestion</span></button></div>
+  </dialog>
+  <dialog id="accountDialog">
+    <button class="close" data-close="accountDialog" aria-label="Close account menu">×</button><p class="dialog-kicker">Your account</p>
+    <div id="signedOutView"><h2>Welcome to Daily Letter</h2><p>Create a profile on this device to personalize your game. Secure cross-device login can be connected next.</p><label class="name-label" for="profileName">Display name</label><input id="profileName" class="name-input" maxlength="30" autocomplete="name" placeholder="Your name"><button class="share account-submit" id="createProfileButton">Create local profile</button></div>
+    <div id="signedInView" hidden><div class="profile-card"><span class="profile-avatar" id="profileAvatar">A</span><div><h2 id="profileGreeting">Hello!</h2><p>Progress is saved on this device.</p></div></div><button class="secondary-action" id="openSettingsFromAccount">Color &amp; display settings</button><button class="logout-button" id="logoutButton">Log out</button></div>
+  </dialog>
+  <script src="game.js"></script>
+</body>
+</html>
