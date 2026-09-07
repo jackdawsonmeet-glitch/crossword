@@ -21,3 +21,32 @@ footer{text-align:center;border-top:1px solid var(--line);padding:17px;font:ital
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 .privacy-note a,footer a{color:var(--navy);font-weight:900}.account-form button:disabled,.account-form input:disabled,.account-form select:disabled{opacity:.6;cursor:wait}
+
+/* Phone and small-tablet refinement */
+html{max-width:100%;overflow-x:hidden}body{max-width:100%;overflow-x:hidden}
+@media(max-width:760px){
+  .ad-banner{height:58px;min-height:58px;margin:6px auto 8px;width:calc(100% - 16px);gap:6px;padding:6px 10px;text-align:center}
+  .ad-banner span{font-size:.62rem}.ad-banner strong{font-size:.78rem;line-height:1.2}
+  .topbar{position:sticky;top:0;min-height:62px;grid-template-columns:52px minmax(0,1fr) 52px;padding:0 8px}
+  .left-tools{min-width:0}.left-tools .menu-button{display:none}.how-to-play{width:44px;height:44px}
+  .brand{min-width:0;justify-content:center}.brand h1{font-size:1.18rem;white-space:nowrap}
+  .header-tools{min-width:0}.account-button{width:44px;height:44px}.account-avatar{width:34px;height:34px}
+  .game{width:100%;padding:14px 8px 22px}.welcome{margin-bottom:8px}.welcome span{font-size:.68rem}.welcome h2{font-size:1.35rem;margin:4px 0}.welcome p{font-size:.9rem}
+  .game-meta{margin-bottom:8px}.message{height:28px;font-size:.85rem}
+  .board{width:min(300px,calc(100vw - 34px));gap:5px;margin:1px 0 13px}.row{gap:5px}.tile{font-size:clamp(1.4rem,8vw,1.9rem)}
+  .keyboard{width:100%;gap:5px;padding:0 2px}.key-row{gap:3px}.key{height:50px;max-width:none;font-size:.94rem;border-radius:6px}.key.wide{max-width:none;flex:1.45;font-size:.68rem}
+  .side-menu{width:min(340px,92vw);padding-inline:18px}.side-menu-head{height:68px}.side-menu nav{padding:15px 0;gap:5px}.menu-link{padding:12px 8px;font-size:1rem}
+  dialog{width:calc(100vw - 12px);max-width:none;padding:20px 18px;border-radius:10px}
+  #accountDialog{width:calc(100vw - 8px);max-height:calc(100dvh - 8px);overflow-y:auto;overscroll-behavior:contain;padding:15px 14px}
+  #accountDialog h2{font-size:1.35rem;margin-bottom:6px}.privacy-note{font-size:.76rem;padding:6px 8px;margin-bottom:7px}
+  .account-form{gap:7px;margin-top:6px}.form-pair{grid-template-columns:1fr 1fr;gap:7px}.account-form label{font-size:.8rem;gap:2px}
+  .account-form input,.account-form select{min-height:44px;padding:6px 8px;font-size:16px}.phone-row span{padding:0 7px}.username-row{grid-template-columns:minmax(0,1fr) 54px}
+  .account-submit{position:sticky;bottom:0;z-index:2;min-height:46px;box-shadow:0 -6px 12px var(--paper)}.consent-row{font-size:.74rem!important}.consent-row input{width:21px;height:21px}
+}
+@media(max-width:390px){
+  .brand h1{font-size:1.05rem}.welcome p{display:none}.board{width:min(282px,calc(100vw - 26px))}
+  .key{height:47px;font-size:.87rem}.form-pair{gap:5px}.account-form label{font-size:.75rem}
+}
+@media(max-height:670px) and (max-width:760px){
+  .ad-banner{display:none}.welcome{display:none}.game{padding-top:8px}.board{width:min(270px,calc(100vw - 32px));margin-bottom:8px}.key{height:43px}
+}
