@@ -117,7 +117,7 @@
         <div class="form-pair"><label>ZIP code<input id="profileZip" required inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" autocomplete="postal-code" placeholder="43215"></label><label>Player username<div class="username-row"><input id="profileUsername" required minlength="4" maxlength="24" pattern="[A-Za-z0-9_]+" autocomplete="username"><button type="button" id="generateUsernameButton">Make</button></div></label></div>
         <label>Password<input id="profilePassword" required type="password" minlength="8" autocomplete="new-password" placeholder="At least 8 characters"></label>
         <label class="consent-row"><input id="profileConsent" required type="checkbox"> I agree to the storage and use of this information for my player account and game services.</label>
-        <button class="share account-submit" type="submit">Create My ID &amp; Start Playing</button>
+        <p id="registerStatus" class="form-status" role="status" aria-live="polite"></p><button class="share account-submit" id="registerSubmit" type="submit"><span class="button-label">Create My ID &amp; Start Playing</span><span class="button-spinner" aria-hidden="true"></span></button>
       </form><button class="text-action" id="showLoginButton">Already have an ID? Log in</button>
       <form id="loginForm" class="account-form" hidden><label>Username<input id="loginUsername" required autocomplete="username"></label><label>Password<input id="loginPassword" required type="password" autocomplete="current-password"></label><button class="share account-submit" type="submit">Log In</button><button class="text-action" type="button" id="showRegisterButton">Create a new Player ID</button></form>
     </div>
