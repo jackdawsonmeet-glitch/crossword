@@ -26,6 +26,22 @@
     emblem.className = 'ad-one-emblem';
     emblem.setAttribute('aria-hidden','true');
     emblem.innerHTML = '<svg viewBox="0 0 100 100" fill="none"><path d="M18 35 33 47 50 23 67 47 82 35 73 70H27Z" fill="currentColor"/><path d="M28 79H72" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="18" r="5" fill="currentColor"/><circle cx="16" cy="30" r="4" fill="currentColor"/><circle cx="84" cy="30" r="4" fill="currentColor"/></svg>';
+
+    const wheel = document.createElement('div');
+    wheel.className = 'ad-one-wheel';
+    wheel.setAttribute('role', 'img');
+    wheel.setAttribute('aria-label', 'Illustrative eight-section prize wheel: $200, $400, $600, $800, $1,000, $1,200, $1,500 and $2,000. No cash awarded here.');
+    const amounts = ['$200','$400','$600','$800','$1,000','$1,200','$1,500','$2,000'];
+    const point = (r,a) => [160+r*Math.cos(a*Math.PI/180),160+r*Math.sin(a*Math.PI/180)];
+    let sectors = '';
+    amounts.forEach((amount,i) => {
+      const angle = -90+i*45, mid = angle+22.5;
+      const a=point(143,angle), b=point(143,angle+45), t=point(94,mid);
+      sectors += '<path d="M160 160 L'+a.join(' ')+' A143 143 0 0 1 '+b.join(' ')+' Z" fill="'+(i%2?'#ffe5a0':'#9d1025')+'" stroke="#e4af45" stroke-width="2"/>';
+      sectors += '<text x="'+t[0]+'" y="'+t[1]+'" transform="rotate('+(mid+90)+' '+t.join(' ')+')" text-anchor="middle" dominant-baseline="middle" font-family="Arial,sans-serif" font-size="21" font-weight="900" fill="'+(i%2?'#630b18':'#fff2bf')+'">'+amount+'</text>';
+    });
+    wheel.innerHTML = '<svg class="ad-one-wheel-disc" viewBox="0 0 320 320" aria-hidden="true"><circle cx="160" cy="160" r="155" fill="#f4c762" stroke="#fff0b8" stroke-width="4"/>'+sectors+'<circle cx="160" cy="160" r="26" fill="#ffdf87" stroke="#b57b22" stroke-width="5"/><path d="m148 160 8 8 16-18" stroke="#7f101e" stroke-width="5" fill="none"/></svg><span class="ad-one-wheel-pointer" aria-hidden="true">▼</span>';
+
     const heading = document.createElement('h2');
     heading.className = 'ad-one-headline';
     heading.textContent = config.headline;
@@ -39,7 +55,8 @@
     stars.className = 'ad-one-stars';
     stars.setAttribute('aria-hidden','true');
     for(let i=0;i<4;i++){const star=document.createElement('i');star.textContent='✦';stars.append(star);}
-    link.append(emblem,heading,description,cta,stars);
+    link.classList.add('ad-one-wheel-design');
+    link.append(emblem,heading,wheel,description,cta,stars);
   } else {
     link.classList.add('ad-one-media-link');
     const media = document.createElement(mode === 'video' ? 'video' : 'img');
@@ -60,7 +77,7 @@
     slot.classList.toggle('ad-one-paused',paused);
     const pause = document.createElement('button');
     pause.type = 'button'; pause.className = 'ad-one-pause';
-    function paint(){pause.textContent=paused?'Play animation':'Pause animation';}
+    function paint(){pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'Play animation':'Pause animation');}
     paint();
     pause.addEventListener('click',()=>{
       paused = !paused;
