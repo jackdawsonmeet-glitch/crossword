@@ -315,6 +315,7 @@ body>footer{padding:10px 16px;font-size:.875rem;line-height:1.35}
 .rank-player{min-width:0}
 .rank-player strong,.rank-player small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .rank-player strong{font-size:.9rem}.rank-player small{margin-top:3px;color:#6e6e73;font-size:.7rem}
+.rank-player em{display:inline-block;margin-left:5px;border-radius:999px;background:#e8e8ed;color:#6e6e73;padding:2px 5px;font-size:.55rem;font-style:normal;font-weight:700;vertical-align:2px}
 .rank-score{color:#0071e3;font-size:1rem}
 .leaderboard-loading,.leaderboard-empty{display:block!important;padding:16px 8px!important;color:#6e6e73;font-size:.85rem;line-height:1.4;text-align:center}
 .leaderboard-note{margin:13px 3px 0!important;color:#8e8e93!important;font-size:.7rem!important;line-height:1.4;text-transform:none!important;letter-spacing:0!important}
