@@ -12,7 +12,7 @@ window.AD_BLOCK_1 = {
   destination: "https://sample2.com",
   mediaUrl: "",
   posterUrl: "",
-  headline: "GIVE IT A SPIN",
+  headline: "GIVE IT A SPIN TO WIN $2000",
   description: "Prize wheel preview. No cash awarded here.",
   buttonText: "PLAY NOW",
   altText: "Explore the prize wheel preview — Play Now"
