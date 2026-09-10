@@ -1,5 +1,5 @@
 // Opens the destination in a full-page frame, preserving existing fullscreen.
-// Destination must permit iframe embedding. Open directly is available otherwise.
+// Destination must permit iframe embedding; no extra toolbar is displayed.
 // AUTO REDIRECT SETTINGS — edit these three values and commit this file.
 // enabled: true turns redirects ON; false turns them OFF.
 // delaySeconds: seconds after the page finishes loading.
