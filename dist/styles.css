@@ -124,3 +124,17 @@ html{max-width:100%;overflow-x:hidden}body{max-width:100%;overflow-x:hidden}
   .profile-details dl{grid-template-columns:1fr}
   .profile-details .profile-address{grid-column:auto}
 }
+
+
+/* Editable player profile */
+.profile-edit-button{margin-top:-2px}
+.profile-edit-form{padding:15px;border:1px solid var(--gold);border-radius:12px;background:#fffaf0}
+.profile-edit-form h3{margin:0 0 10px}
+.profile-edit-form[hidden],.profile-details[hidden],.profile-edit-button[hidden]{display:none}
+.profile-username-note{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.profile-edit-actions{display:grid;grid-template-columns:1fr 1.35fr;gap:10px}
+.profile-edit-actions button{margin:0;min-height:48px}
+@media(max-width:560px){
+  .profile-edit-actions{grid-template-columns:1fr}
+  .profile-edit-form{padding:12px}
+}
