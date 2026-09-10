@@ -121,7 +121,26 @@
       </form><button class="text-action" id="showLoginButton">Already have an ID? Log in</button>
       <form id="loginForm" class="account-form" hidden><label>Username<input id="loginUsername" required autocomplete="username"></label><label>Password<input id="loginPassword" required type="password" autocomplete="current-password"></label><button class="share account-submit" type="submit">Log In</button><button class="text-action" type="button" id="showRegisterButton">Create a new Player ID</button></form>
     </div>
-    <div id="signedInView" hidden><div class="profile-card"><span class="profile-avatar" id="profileAvatar">A</span><div><h2 id="profileGreeting">Hello!</h2><p id="profileUsernameDisplay">Player ID</p></div></div><button class="secondary-action" id="openSettingsFromAccount">Color &amp; display settings</button><button class="logout-button" id="logoutButton">Log out</button></div>
+    <div id="signedInView" hidden>
+      <div class="profile-card"><span class="profile-avatar" id="profileAvatar">A</span><div><p class="profile-eyebrow">My player profile</p><h2 id="profileGreeting">Hello!</h2><p id="profileUsernameDisplay">Player ID</p></div></div>
+      <section class="profile-streak" aria-label="Daily streak and game statistics">
+        <div class="streak-feature"><span class="streak-flame" aria-hidden="true">🔥</span><div><strong id="profileStreak">0</strong><span>Day streak</span></div></div>
+        <div><strong id="profileBest">0</strong><span>Best streak</span></div>
+        <div><strong id="profilePlayed">0</strong><span>Games played</span></div>
+        <div><strong id="profileWinRate">0%</strong><span>Win rate</span></div>
+      </section>
+      <section class="profile-details" aria-label="Player account details">
+        <h3>Your details</h3>
+        <dl>
+          <div><dt>Full name</dt><dd id="profileFullName">—</dd></div>
+          <div><dt>Age</dt><dd id="profileAgeDisplay">—</dd></div>
+          <div><dt>Phone</dt><dd id="profilePhoneDisplay">—</dd></div>
+          <div class="profile-address"><dt>Address</dt><dd id="profileAddressDisplay">—</dd></div>
+        </dl>
+      </section>
+      <p class="profile-streak-note">Play and solve the daily puzzle to keep your streak going.</p>
+      <button class="secondary-action" id="openSettingsFromAccount">Color &amp; display settings</button><button class="logout-button" id="logoutButton">Log out</button>
+    </div>
   </dialog>
   <script src="game.js"></script>
 </body>
