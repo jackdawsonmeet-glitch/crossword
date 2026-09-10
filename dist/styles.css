@@ -50,3 +50,14 @@ html{max-width:100%;overflow-x:hidden}body{max-width:100%;overflow-x:hidden}
 @media(max-height:670px) and (max-width:760px){
   .ad-banner{display:none}.welcome{display:none}.game{padding-top:8px}.board{width:min(270px,calc(100vw - 32px));margin-bottom:8px}.key{height:43px}
 }
+
+/* Smooth account creation feedback */
+.form-status{min-height:22px;margin:0;padding:0 4px;font-size:.86rem;font-weight:800;line-height:1.35;color:#665f54}
+.form-status.error{color:#9b2f2a;background:#fff0ed;border-left:4px solid var(--red);padding:7px 9px;border-radius:4px}
+.form-status.working{color:var(--navy)}.form-status.success{color:#205f43;background:#edf8f1;border-left:4px solid var(--green);padding:7px 9px;border-radius:4px}
+.account-form .field-error{border-color:var(--red)!important;background:#fff7f5!important}
+.account-submit{display:flex;align-items:center;justify-content:center;gap:10px;transition:background .2s,transform .2s,opacity .2s}
+.account-submit:not(:disabled):hover{transform:translateY(-1px)}.button-spinner{display:none;width:18px;height:18px;border:3px solid rgba(255,255,255,.45);border-top-color:white;border-radius:50%}
+.account-form.is-busy .button-spinner{display:inline-block;animation:account-spin .8s linear infinite}.account-form.is-busy .account-submit{background:#47627a;opacity:1}.account-form.is-success .account-submit{background:var(--green);opacity:1}
+@keyframes account-spin{to{transform:rotate(360deg)}}
+@media(max-width:760px){.form-status{font-size:.76rem;min-height:18px}.form-status.error,.form-status.success{padding:5px 7px}.account-submit{min-height:48px}}
