@@ -46,7 +46,11 @@
     </div>
   </header>
 
-  <main>
+  <main class="home-layout">
+    <aside class="home-card home-streak-card" aria-label="Your daily streak">
+      <div class="home-card-icon" aria-hidden="true">🔥</div><p>Daily streak</p><strong id="homeStreak">0 days</strong>
+      <span id="homeStreakMessage">Sign in to track your streak</span>
+    </aside>
     <section class="game" aria-label="Daily word puzzle">
       <div class="welcome"><span>Today’s challenge</span><h2>Find the hidden word</h2><p>Six tries. Five letters. Enjoy the challenge.</p></div>
       <div class="game-meta"><span id="puzzleNumber">Puzzle</span><span aria-hidden="true">•</span><time id="today"></time></div>
@@ -54,6 +58,11 @@
       <div id="board" class="board" role="grid" aria-label="Guess board"></div>
       <div id="keyboard" class="keyboard" aria-label="On-screen keyboard"></div>
     </section>
+    <aside class="home-card leaderboard-card" aria-label="Player rankings">
+      <div class="leaderboard-heading"><div><p>Community</p><h2>Top players</h2></div><span class="leaderboard-trophy" aria-hidden="true">🏆</span></div>
+      <ol id="leaderboardList" class="leaderboard-list"><li class="leaderboard-loading">Loading rankings…</li></ol>
+      <p class="leaderboard-note">Ranked by puzzles solved, then daily streak.</p>
+    </aside>
   </main>
 
   <footer>Fresh puzzle every day · <a href="privacy.html">Privacy</a> · <a href="admin.html">Administrator</a></footer>
