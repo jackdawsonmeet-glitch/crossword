@@ -4,8 +4,8 @@
 window.AD_BLOCK_3 = {
   enabled: true,
   destination: "https://sample2.com",
-  eyebrow: "THE ROYAL",
-  headline: "GAME LOUNGE",
-  description: "Make your next move.",
+  eyebrow: "THE ROYAL CASINO COMING WEEK",
+  headline: "TicketS: $60 for 1 or $100 for 2 in your city",
+  description: "CAll US",
   buttonText: "PLAY NOW"
 };
