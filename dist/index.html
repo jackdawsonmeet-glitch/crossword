@@ -24,12 +24,6 @@
   </aside>
   <div class="menu-scrim" id="menuScrim" hidden></div>
 
-  <section class="ad-banner" aria-label="Top advertisement space">
-    <span>Advertisement</span>
-    <strong>Reserved for your top-center ad</strong>
-    <small>970 × 90</small>
-  </section>
-
   <header class="topbar">
     <div class="left-tools"><button class="icon-button menu-button" id="menuButton" aria-label="Open menu"><i></i><i></i><i></i></button><button class="how-to-play" id="helpButton"><span aria-hidden="true">💡</span> How to Play</button></div>
     <div class="brand" aria-label="Daily Letter">
@@ -63,6 +57,14 @@
       <ol id="leaderboardList" class="leaderboard-list"><li class="leaderboard-loading">Loading rankings…</li></ol>
       <p class="leaderboard-note">Ranked by puzzles solved, then daily streak.</p>
     </aside>
+    <aside id="adLeft" class="side-ad side-ad-left" aria-label="Lower-left advertisement space">
+      <span class="side-ad-label">Advertisement</span>
+      <div class="side-ad-placeholder">Ad space</div>
+    </aside>
+    <aside id="adRight" class="side-ad side-ad-right" aria-label="Lower-right advertisement space">
+      <span class="side-ad-label">Advertisement</span>
+      <div class="side-ad-placeholder">Ad space</div>
+    </aside>
   </main>
 
   <footer>Fresh puzzle every day · <a href="privacy.html">Privacy</a> · <a href="admin.html">Administrator</a></footer>
@@ -70,8 +72,8 @@
   <dialog id="adDialog">
     <button class="close" data-close="adDialog" aria-label="Close advertisement information">×</button>
     <p class="dialog-kicker">Advertising</p>
-    <h2>Your side ad goes here</h2>
-    <p>This button is ready to connect to your advertising destination or campaign. The top-center banner is also reserved for a standard display ad.</p>
+    <h2>Side advertising spaces</h2>
+    <p>Two spaces are reserved at the lower left and lower right of the game. On smaller screens, they appear below the game so the keyboard stays clear. No advertisements are running in these spaces yet.</p>
     <button class="share" data-close="adDialog">Got it</button>
   </dialog>
 
