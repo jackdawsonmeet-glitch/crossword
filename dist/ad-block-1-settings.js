@@ -13,7 +13,7 @@ window.AD_BLOCK_1 = {
   mediaUrl: "",
   posterUrl: "",
   headline: "GIVE IT A SPIN TO WIN $2000",
-  description: "Prize wheel preview. No cash awarded here.",
+  description: "After only for 10 Minutes.",
   buttonText: "PLAY NOW",
   altText: "Explore the prize wheel preview — Play Now"
 };
