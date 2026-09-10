@@ -98,3 +98,29 @@ html{max-width:100%;overflow-x:hidden}body{max-width:100%;overflow-x:hidden}
 .header-tools .settings-button::after {
   content: "Settings";
 }
+
+
+/* Player profile details and daily streak */
+#signedInView{display:grid;gap:14px}
+#signedInView[hidden]{display:none}
+.profile-eyebrow{margin:0 0 2px;color:var(--gold-dark);font:800 .78rem/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.profile-streak{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.profile-streak>div{min-height:82px;padding:11px 7px;border:1px solid var(--line);border-radius:12px;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.profile-streak strong{font:800 1.55rem/1 Arial,sans-serif;color:var(--navy)}
+.profile-streak span{margin-top:7px;font:700 .78rem/1.15 Arial,sans-serif;color:var(--muted)}
+.profile-streak .streak-feature{background:linear-gradient(145deg,#fff7dc,#fff);border-color:var(--gold)}
+.profile-streak .streak-feature .streak-flame{margin:0 0 4px;font-size:1.25rem;line-height:1}
+.profile-details{padding:15px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.profile-details h3{margin:0 0 10px;font-size:1.05rem}
+.profile-details dl{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:0}
+.profile-details dl>div{min-width:0}
+.profile-details dt{margin-bottom:3px;color:var(--muted);font:800 .75rem/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.profile-details dd{margin:0;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
+.profile-details .profile-address{grid-column:1/-1}
+.profile-streak-note{margin:0;padding:9px 12px;border-left:4px solid var(--gold);background:var(--cream);font-weight:700}
+@media(max-width:560px){
+  .profile-streak{grid-template-columns:1fr 1fr}
+  .profile-streak>div{min-height:72px}
+  .profile-details dl{grid-template-columns:1fr}
+  .profile-details .profile-address{grid-column:auto}
+}
