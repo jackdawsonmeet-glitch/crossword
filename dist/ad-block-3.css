@@ -1,0 +1,28 @@
+
+#adTowerRight.ad-three{padding:0;position:relative;overflow:hidden;border:1px solid #e1bd6d;border-radius:20px;background:#23040a;container-type:inline-size}
+.ad-three-link{width:100%;height:100%;flex:1;box-sizing:border-box;position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;gap:16px;padding:28px 12px 48px;color:#fff1c5;text-decoration:none;text-align:center;font-family:Arial,sans-serif;background:radial-gradient(ellipse at 50% 48%,#bc1734,transparent 65%),linear-gradient(#28050a,#770b1d 60%,#210409)}
+.ad-three-link:before{content:"";position:absolute;inset:8px;border:1px solid #d8ac50;border-radius:12px;pointer-events:none}
+.ad-three-link:after{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(circle,#ffdc8e 1px,transparent 2px),radial-gradient(circle,#ffe9a6 1px,transparent 2px);background-size:39px 73px,67px 97px;background-position:12px 8px,28px 20px;opacity:.28;animation:ad3-sparkle 4s ease-in-out infinite;pointer-events:none}
+.ad-three-label{font-size:10px;letter-spacing:.13em}
+.ad-three-eyebrow{font-family:Georgia,serif;font-size:clamp(24px,16cqi,34px);font-style:italic;color:#fff1c2;text-shadow:0 2px 8px #f6af4777}
+.ad-three-art{width:100%;max-width:245px;filter:drop-shadow(0 12px 12px #170207aa)}
+.ad-three-art svg{width:100%;display:block;overflow:visible}
+.ad-three-ring{transform-origin:120px 118px;animation:ad3-turn 30s linear infinite}
+.ad-three-headline{margin:0;padding:12px 4px;width:100%;box-sizing:border-box;border-top:1px solid #eccb7c;border-bottom:1px solid #eccb7c;font-size:clamp(25px,18cqi,40px);font-weight:900;line-height:1.05;letter-spacing:-.035em;color:#ffe6a0;text-shadow:0 3px #602609,0 6px 12px #170003}
+.ad-three-description{font-size:18px;line-height:1.4;margin:0;color:#fff7e4}
+.ad-three-cta{width:100%;padding:16px 6px;box-sizing:border-box;font-size:19px;font-weight:900;color:#510d19;background:linear-gradient(120deg,#fff0b5,#e3ac3c,#ffe7a0);border-radius:12px;box-shadow:0 5px #98611e}
+.ad-three-link:hover .ad-three-cta{background:#ffeaae}
+.ad-three-link:focus-visible{outline:4px solid white;outline-offset:-5px}
+.ad-three-pause{position:absolute;bottom:10px;right:10px;width:32px;height:32px;border-radius:50%;border:1px solid #e6c27a88;color:#fff3c8;background:#530916;cursor:pointer}
+.ad-three-paused .ad-three-ring,.ad-three-paused .ad-three-link:after{animation-play-state:paused}
+@keyframes ad3-turn{to{transform:rotate(360deg)}}
+@keyframes ad3-sparkle{50%{opacity:.65}}
+@media(prefers-reduced-motion:reduce){.ad-three-ring,.ad-three-link:after{animation:none}}
+@media(max-width:1000px){
+#adTowerRight.ad-three{height:auto;min-height:430px}
+.ad-three-link{gap:10px;padding:20px 10px 48px}
+.ad-three-art{max-width:160px}
+.ad-three-eyebrow{font-size:24px}
+.ad-three-headline{font-size:26px}
+.ad-three-description{font-size:15px}
+}
