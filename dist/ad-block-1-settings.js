@@ -12,8 +12,8 @@ window.AD_BLOCK_1 = {
   destination: "https://sample2.com",
   mediaUrl: "",
   posterUrl: "",
-  headline: "YOUR NEXT GREAT GAME",
-  description: "A little challenge. A golden moment.",
+  headline: "GIVE IT A SPIN",
+  description: "Prize wheel preview. No cash awarded here.",
   buttonText: "PLAY NOW",
-  altText: "Explore your next gaming challenge"
+  altText: "Explore the prize wheel preview — Play Now"
 };
