@@ -148,16 +148,20 @@
         </dl>
       </section>
       <button class="secondary-action profile-edit-button" id="editProfileButton">Edit my details</button>
-      <form id="editProfileForm" class="account-form profile-edit-form" hidden>
-        <h3>Edit your details</h3>
+      <form id="editProfileForm" class="account-form profile-edit-form" aria-labelledby="editProfileHeading" hidden>
+        <div class="profile-edit-fields" id="profileEditFields">
+        <h3 id="editProfileHeading">Edit your details</h3>
         <div class="form-pair"><label>First name<input id="editFirstName" required maxlength="30" autocomplete="given-name"></label><label>Last name<input id="editLastName" required maxlength="30" autocomplete="family-name"></label></div>
         <div class="form-pair"><label>Age<input id="editAge" required type="number" min="18" max="120" inputmode="numeric"></label><label>U.S. phone number<div class="phone-row"><span>+1</span><input id="editPhone" required type="tel" autocomplete="tel-national" inputmode="tel" pattern="[0-9 ()-]{10,14}"></div></label></div>
         <label>Street address<input id="editStreet" required maxlength="100" autocomplete="street-address"></label>
         <div class="form-pair"><label>City<input id="editCity" required maxlength="50" autocomplete="address-level2"></label><label>State<select id="editState" required autocomplete="address-level1"></select></label></div>
         <label>ZIP code<input id="editZip" required inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" autocomplete="postal-code"></label>
         <p class="profile-username-note">Player ID <strong id="editUsernameDisplay"></strong> cannot be changed.</p>
+        </div>
+        <div class="profile-edit-footer">
         <p id="editProfileStatus" class="form-status" role="status" aria-live="polite"></p>
         <div class="profile-edit-actions"><button type="button" class="secondary-action" id="cancelProfileEdit">Cancel</button><button type="submit" class="share account-submit"><span class="button-label">Save changes</span><span class="button-spinner" aria-hidden="true"></span></button></div>
+        </div>
       </form>
       <p class="profile-streak-note">Play and solve the daily puzzle to keep your streak going.</p>
       <button class="secondary-action" id="openSettingsFromAccount">Color &amp; display settings</button><button class="logout-button" id="logoutButton">Log out</button>
