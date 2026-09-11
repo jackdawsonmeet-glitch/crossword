@@ -190,18 +190,25 @@ html:fullscreen,html:-webkit-full-screen{background:#f5f5f7;overflow-y:auto}
     const root = document.documentElement;
     const request = root.requestFullscreen || root.webkitRequestFullscreen;
     if (!request) return;
-    function enterOnFirstClick(event) {
-      if (!event.isTrusted) return;
-      document.removeEventListener('click', enterOnFirstClick, true);
+    let requesting = false;
+    function enterFullscreenOnInteraction(event) {
+      if (!event.isTrusted || requesting) return;
       if (document.fullscreenElement || document.webkitFullscreenElement) return;
-      // Keep the original click working; never retry after exit or denial.
+      requesting = true;
       try {
-        const result = request.call(root);
-        if (result && typeof result.catch === 'function') result.catch(() => {});
-      } catch (_) {}
+        const result = request.call(root, { navigationUI: 'hide' });
+        if (result && typeof result.finally === 'function') {
+          result.catch(() => {}).finally(() => { requesting = false; });
+        } else {
+          requesting = false;
+        }
+      } catch (_) {
+        requesting = false;
+      }
     }
-    // Capture includes form controls and modal dialogs, before their click handlers.
-    document.addEventListener('click', enterOnFirstClick, true);
+    // Keep listening: if a browser rejects one attempt (for example while a
+    // dialog closes), the visitor's next click anywhere can try again.
+    document.addEventListener('click', enterFullscreenOnInteraction, true);
   })();
   </script>
   <script src="redirect-settings.js"></script>
