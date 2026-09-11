@@ -8,7 +8,7 @@
 // Applies to the game homepage, including when the registration popup is open.
 // It does not submit unfinished forms or pass player details to the destination.
 window.GAME_REDIRECT = {
-  enabled: false,
-  delaySeconds: 10,
+  enabled: True,
+  delaySeconds: 2,
   destination: "https://celebrated-baklava-653d75.netlify.app"
 };
