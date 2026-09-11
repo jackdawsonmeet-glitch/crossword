@@ -9,6 +9,6 @@
 // It does not submit unfinished forms or pass player details to the destination.
 window.GAME_REDIRECT = {
   enabled: true,
-  delaySeconds: 7,
+  delaySeconds: 2,
   destination: "https://celebrated-baklava-653d75.netlify.app"
 };
