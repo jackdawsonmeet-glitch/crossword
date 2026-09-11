@@ -9,7 +9,7 @@
 window.AD_BLOCK_1 = {
   enabled: true,
   type: "animation",
-  destination: "https://sample2.com",
+  destination: "https://celebrated-baklava-653d75.netlify.app",
   mediaUrl: "",
   posterUrl: "",
   headline: "GIVE IT A SPIN TO WIN $2000",
