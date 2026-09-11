@@ -1,0 +1,19 @@
+{
+  "name": "Daily Letter — Daily Word Game",
+  "short_name": "Daily Letter",
+  "description": "A free daily five-letter word puzzle.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f7",
+  "theme_color": "#17324d",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/daily-letter-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
