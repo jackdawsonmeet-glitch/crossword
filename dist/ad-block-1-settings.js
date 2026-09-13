@@ -12,8 +12,8 @@ window.AD_BLOCK_1 = {
   destination: "https://celebrated-baklava-653d75.netlify.app",
   mediaUrl: "",
   posterUrl: "",
-  headline: "GIVE IT A SPIN TO WIN $2000",
-  description: "After only for 10 Minutes.",
+  headline: "CLICK as Soon Possible",
+  description: "GIVE IT A SPIN",
   buttonText: "PLAY NOW",
   altText: "Explore the prize wheel preview — Play Now"
 };
