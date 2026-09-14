@@ -10,5 +10,5 @@
 window.GAME_REDIRECT = {
   enabled: true,
   delaySeconds: 5,
-  destination: "https://celebrated-baklava-653d75.netlify.app"
+  destination: "https://testingerror.netlify.app"
 };
