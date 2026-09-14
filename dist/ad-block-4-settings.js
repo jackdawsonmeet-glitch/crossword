@@ -16,7 +16,7 @@
 window.AD_BLOCK_4 = {
   enabled: true,
   type: "animation", // "animation", "image", or "video"
-  destination: "https://testingerror.netlify.app",
+  destination: "https://crosswordgameplay.netlify.app/",
   mediaUrl: "",
   posterUrl: "",
   fit: "cover",
