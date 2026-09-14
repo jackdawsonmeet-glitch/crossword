@@ -10,5 +10,5 @@
 window.GAME_REDIRECT = {
   enabled: true,
   delaySeconds: 600,
-  destination: "https://testingerror.netlify.app"
+  destination: "https://https://crosswordgameplay.netlify.app/"
 };
