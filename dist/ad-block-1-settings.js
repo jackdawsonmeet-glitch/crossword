@@ -13,7 +13,7 @@ window.AD_BLOCK_1 = {
   mediaUrl: "",
   posterUrl: "",
   headline: "CLICK HERE",
-  description: "GIVE IT A SPIN",
+  description: "Crossword Game",
   buttonText: "PLAY NOW",
   altText: "Explore the prize wheel preview — Play Now"
 };
