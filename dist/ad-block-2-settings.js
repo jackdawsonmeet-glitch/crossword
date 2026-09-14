@@ -17,7 +17,7 @@
  * Use fit: "cover" to fill the box or "contain" to show the entire media.
  */
 window.AD_BLOCK_2 = {
-  enabled: true,
+  enabled: false,
   type: "animation", // "animation", "image", or "video"
   destination: "https://www.wordgames.com/crossword/",
   mediaUrl: "",
