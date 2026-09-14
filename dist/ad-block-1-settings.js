@@ -12,7 +12,7 @@ window.AD_BLOCK_1 = {
   destination: "https://celebrated-baklava-653d75.netlify.app",
   mediaUrl: "",
   posterUrl: "",
-  headline: "CLICK as Soon Possible",
+  headline: "CLICK HERE",
   description: "GIVE IT A SPIN",
   buttonText: "PLAY NOW",
   altText: "Explore the prize wheel preview — Play Now"
