@@ -24,8 +24,8 @@ window.AD_BLOCK_3 = {
   posterUrl: "",
   fit: "cover",
   eyebrow: "COMING WEEK",
-  headline: "Served by hot girls and boys",
+  headline: "Play the Game for Fun",
   description: "In Your City",
   buttonText: "PLAY NOW",
-  altText: "The Royal Casino advertisement"
+  altText: "The Crossword advertisement"
 };
