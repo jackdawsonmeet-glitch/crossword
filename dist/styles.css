@@ -549,3 +549,152 @@ body>footer{padding:10px 16px;font-size:.875rem;line-height:1.35}
 @media (max-width: 440px) {
   #accountDialog .profile-edit-fields .form-pair { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* One-screen desktop layout — 2026-09-14 */
+@media (min-width: 1280px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: 78px minmax(0, 1fr) auto;
+  }
+
+  .topbar {
+    height: 78px;
+    min-height: 78px;
+    box-sizing: border-box;
+  }
+
+  .home-layout {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-width: 1920px;
+    box-sizing: border-box;
+    overflow: hidden;
+    grid-template-columns:
+      minmax(120px, 200px)
+      minmax(0, 1fr)
+      minmax(160px, 240px)
+      minmax(400px, 590px)
+      minmax(190px, 310px)
+      minmax(0, 1fr)
+      minmax(120px, 200px);
+    grid-template-areas:
+      "tower-left . streak puzzle rankings . tower-right"
+      "tower-left left-ad left-ad puzzle right-ad right-ad right-ad";
+    grid-template-rows: minmax(0, 1fr) clamp(108px, 17dvh, 150px);
+    align-items: stretch;
+    gap: clamp(10px, 1.15vw, 18px);
+    padding: clamp(10px, 1.7dvh, 16px) clamp(12px, 1.5vw, 24px);
+  }
+
+  .home-layout .game {
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+    box-sizing: border-box;
+    align-self: stretch;
+    overflow: hidden;
+  }
+
+  .home-layout .home-card {
+    min-width: 0;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .home-layout .side-ad,
+  .home-layout .side-ad-tall,
+  #adTowerLeft,
+  #adTowerRight,
+  #adLeft,
+  #adRight {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    align-self: stretch;
+    overflow: hidden;
+  }
+
+  #adTowerLeft {
+    height: 100%;
+    grid-area: tower-left;
+  }
+
+  #adTowerRight {
+    height: 100%;
+    grid-area: tower-right;
+  }
+
+  #adLeft {
+    height: 100%;
+    aspect-ratio: auto;
+    grid-area: left-ad;
+  }
+
+  #adRight {
+    height: 100%;
+    aspect-ratio: auto;
+    grid-area: right-ad;
+  }
+
+  #adTowerLeft > *,
+  #adTowerRight > *,
+  #adLeft > *,
+  #adRight > * {
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+  }
+
+  body > footer {
+    box-sizing: border-box;
+    padding: 7px 16px;
+    min-height: 32px;
+  }
+}
+
+@media (min-width: 1280px) and (max-height: 760px) {
+  body { grid-template-rows: 64px minmax(0, 1fr) 28px; }
+
+  .topbar {
+    height: 64px;
+    min-height: 64px;
+  }
+
+  .home-layout {
+    grid-template-rows: minmax(0, 1fr) clamp(92px, 15dvh, 112px);
+    padding-block: 8px;
+    gap: 9px;
+  }
+
+  .home-layout .game { padding: 10px 14px; }
+  .home-layout .welcome { margin-bottom: 4px; }
+  .home-layout .welcome h2 { margin-block: 2px 3px; font-size: 1.3rem; }
+  .home-layout .welcome p { display: none; }
+  .home-layout .game-meta { margin-bottom: 5px; font-size: .75rem; }
+  .home-layout .board { gap: 4px; margin-bottom: 7px; }
+  .home-layout .row { gap: 4px; }
+  .home-layout .keyboard,
+  .home-layout .key-row { gap: 3px; }
+  .home-layout .key { height: 38px; min-height: 36px; }
+  .home-card { padding: 12px; }
+  .home-card-icon { width: 40px; height: 40px; margin-bottom: 7px; }
+  .home-streak-card strong { font-size: 1.5rem; }
+  .home-streak-card > span { margin-top: 5px; font-size: .72rem; }
+  .leaderboard-heading { margin-bottom: 7px; }
+  .leaderboard-note { display: none; }
+  body > footer { min-height: 28px; padding: 4px 12px; font-size: .75rem; }
+}
