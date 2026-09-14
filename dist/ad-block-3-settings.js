@@ -17,7 +17,7 @@
 // fit: "cover" fills the box; "contain" shows the entire file.
 // Set enabled to false to restore the original empty ad box.
 window.AD_BLOCK_3 = {
-  enabled: true,
+  enabled: false,
   type: "animation",
   destination: "https://www.wordgames.com/crossword/",
   mediaUrl: "",
