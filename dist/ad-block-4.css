@@ -237,3 +237,33 @@
     font-size: 10px;
   }
 }
+
+/* Narrow-slot containment fix — 2026-09-14 */
+#adRight.ad-four {
+  container-type: inline-size;
+  container-name: ad-four-slot;
+}
+@container ad-four-slot (max-width: 420px) {
+  #adRight.ad-four .ad-four-link {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+    padding: 11px;
+  }
+  #adRight.ad-four .ad-four-kicker {
+    margin-bottom: 3px;
+    font-size: 7px;
+    line-height: 1.1;
+  }
+  #adRight.ad-four .ad-four-headline {
+    font-size: 14px;
+    line-height: 1.05;
+  }
+  #adRight.ad-four .ad-four-description { display: none; }
+  #adRight.ad-four .ad-four-cta {
+    min-height: 32px;
+    max-width: 92px;
+    padding: 7px 10px;
+    font-size: 9px;
+    box-shadow: 0 3px 0 #08734f;
+  }
+}
