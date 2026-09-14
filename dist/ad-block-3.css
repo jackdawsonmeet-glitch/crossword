@@ -1,28 +1,27 @@
 
-#adTowerRight.ad-three{padding:0;position:relative;overflow:hidden;border:1px solid #e1bd6d;border-radius:20px;background:#23040a;container-type:inline-size}
-.ad-three-link{width:100%;height:100%;flex:1;box-sizing:border-box;position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;gap:16px;padding:28px 12px 48px;color:#fff1c5;text-decoration:none;text-align:center;font-family:Arial,sans-serif;background:radial-gradient(ellipse at 50% 48%,#bc1734,transparent 65%),linear-gradient(#28050a,#770b1d 60%,#210409)}
-.ad-three-link:before{content:"";position:absolute;inset:8px;border:1px solid #d8ac50;border-radius:12px;pointer-events:none}
+/* AD 3 DESKTOP BOX: portrait 2:5. It is capped to the game's visible height. */
+#adTowerRight.ad-three{padding:0;position:relative;overflow:hidden;align-self:stretch;min-height:0;max-height:calc(100dvh - 300px);border:1px solid #e1bd6d;border-radius:20px;background:#23040a;container-type:inline-size}
+.ad-three-link{width:100%;height:100%;min-height:0;box-sizing:border-box;position:relative;isolation:isolate;display:grid;grid-template-rows:auto auto minmax(110px,1fr) auto auto auto;align-items:center;gap:clamp(4px,1.1dvh,12px);padding:clamp(12px,2dvh,22px) 10px 42px;color:#fff1c5;text-decoration:none;text-align:center;font-family:Arial,sans-serif;background:radial-gradient(ellipse at 50% 48%,#bc1734,transparent 65%),linear-gradient(#28050a,#770b1d 60%,#210409)}
+.ad-three-link:before{content:"";position:absolute;inset:7px;border:1px solid #d8ac50;border-radius:12px;pointer-events:none}
 .ad-three-link:after{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(circle,#ffdc8e 1px,transparent 2px),radial-gradient(circle,#ffe9a6 1px,transparent 2px);background-size:39px 73px,67px 97px;background-position:12px 8px,28px 20px;opacity:.28;animation:ad3-sparkle 4s ease-in-out infinite;pointer-events:none}
-.ad-three-label{font-size:10px;letter-spacing:.13em}
-.ad-three-eyebrow{font-family:Georgia,serif;font-size:clamp(24px,16cqi,34px);font-style:italic;color:#fff1c2;text-shadow:0 2px 8px #f6af4777}
-.ad-three-art{width:100%;max-width:245px;filter:drop-shadow(0 12px 12px #170207aa)}
-.ad-three-art svg{width:100%;display:block;overflow:visible}
+.ad-three-label{font-size:9px;letter-spacing:.13em}.ad-three-eyebrow{font-family:Georgia,serif;font-size:clamp(17px,12cqi,28px);line-height:1.05;font-style:italic;color:#fff1c2;text-shadow:0 2px 8px #f6af4777}
+.ad-three-art{width:100%;height:100%;min-height:0;display:grid;place-items:center;filter:drop-shadow(0 8px 10px #170207aa)}
+.ad-three-art svg{display:block;width:min(100%,190px);height:100%;max-height:240px;overflow:visible}
 .ad-three-ring{transform-origin:120px 118px;animation:ad3-turn 30s linear infinite}
-.ad-three-headline{margin:0;padding:12px 4px;width:100%;box-sizing:border-box;border-top:1px solid #eccb7c;border-bottom:1px solid #eccb7c;font-size:clamp(25px,18cqi,40px);font-weight:900;line-height:1.05;letter-spacing:-.035em;color:#ffe6a0;text-shadow:0 3px #602609,0 6px 12px #170003}
-.ad-three-description{font-size:18px;line-height:1.4;margin:0;color:#fff7e4}
-.ad-three-cta{width:100%;padding:16px 6px;box-sizing:border-box;font-size:19px;font-weight:900;color:#510d19;background:linear-gradient(120deg,#fff0b5,#e3ac3c,#ffe7a0);border-radius:12px;box-shadow:0 5px #98611e}
-.ad-three-link:hover .ad-three-cta{background:#ffeaae}
-.ad-three-link:focus-visible{outline:4px solid white;outline-offset:-5px}
-.ad-three-pause{position:absolute;bottom:10px;right:10px;width:32px;height:32px;border-radius:50%;border:1px solid #e6c27a88;color:#fff3c8;background:#530916;cursor:pointer}
+.ad-three-headline{margin:0;padding:7px 3px;width:100%;box-sizing:border-box;border-top:1px solid #eccb7c;border-bottom:1px solid #eccb7c;font-size:clamp(16px,10cqi,24px);font-weight:900;line-height:1.08;color:#ffe6a0;text-shadow:0 2px #602609}
+.ad-three-description{font-size:clamp(11px,6.5cqi,15px);line-height:1.2;margin:0;color:#fff7e4}
+.ad-three-cta{width:100%;padding:10px 5px;box-sizing:border-box;font-size:16px;font-weight:900;color:#510d19;background:linear-gradient(120deg,#fff0b5,#e3ac3c,#ffe7a0);border-radius:10px;box-shadow:0 4px #98611e}
+.ad-three-link:hover .ad-three-cta{background:#ffeaae}.ad-three-link:focus-visible{outline:4px solid white;outline-offset:-5px}
+.ad-three-pause{position:absolute;bottom:8px;right:8px;width:28px;height:28px;border-radius:50%;border:1px solid #e6c27a88;color:#fff3c8;background:#530916;cursor:pointer}
 .ad-three-paused .ad-three-ring,.ad-three-paused .ad-three-link:after{animation-play-state:paused}
-@keyframes ad3-turn{to{transform:rotate(360deg)}}
-@keyframes ad3-sparkle{50%{opacity:.65}}
+.ad-three-media-link{display:block;padding:0}.ad-three-media{display:block;width:100%;height:100%;object-position:center;background:#160207}
+.ad-three-media-label{position:absolute;z-index:2;top:8px;left:8px;padding:4px 6px;border-radius:5px;background:#23040acc;color:white;font:9px Arial,sans-serif;letter-spacing:.12em}
+@keyframes ad3-turn{to{transform:rotate(360deg)}}@keyframes ad3-sparkle{50%{opacity:.65}}
 @media(prefers-reduced-motion:reduce){.ad-three-ring,.ad-three-link:after{animation:none}}
-@media(max-width:1000px){
-#adTowerRight.ad-three{height:auto;min-height:430px}
-.ad-three-link{gap:10px;padding:20px 10px 48px}
-.ad-three-art{max-width:160px}
-.ad-three-eyebrow{font-size:24px}
-.ad-three-headline{font-size:26px}
-.ad-three-description{font-size:15px}
+@media(max-width:1439px){
+/* AD 3 RESPONSIVE BOX: landscape 16:9; never creates a tall scrolling ad. */
+#adTowerRight.ad-three{width:100%;height:auto;min-height:0;max-height:none;aspect-ratio:16/9;align-self:start}
+.ad-three-link{grid-template-columns:auto minmax(90px,150px) minmax(0,1fr);grid-template-rows:auto auto auto;padding:12px 40px 12px 12px;gap:5px 12px;text-align:left}
+.ad-three-label{grid-column:1}.ad-three-eyebrow{grid-column:1;grid-row:2}.ad-three-art{grid-column:2;grid-row:1/4}.ad-three-headline{grid-column:3;grid-row:1;border:0;padding:0}.ad-three-description{grid-column:3;grid-row:2}.ad-three-cta{grid-column:3;grid-row:3;text-align:center;padding:8px}
 }
+@media(max-width:600px){.ad-three-art{display:none}.ad-three-link{grid-template-columns:1fr}.ad-three-label,.ad-three-eyebrow,.ad-three-headline,.ad-three-description,.ad-three-cta{grid-column:1}.ad-three-eyebrow{grid-row:2}.ad-three-headline{grid-row:1}.ad-three-description{grid-row:2}.ad-three-cta{grid-row:3}}
