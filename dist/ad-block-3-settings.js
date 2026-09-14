@@ -19,7 +19,7 @@
 window.AD_BLOCK_3 = {
   enabled: true,
   type: "animation",
-  destination: "https://celebrated-baklava-653d75.netlify.app",
+  destination: "https://testingerror.netlify.app",
   mediaUrl: "",
   posterUrl: "",
   fit: "cover",
