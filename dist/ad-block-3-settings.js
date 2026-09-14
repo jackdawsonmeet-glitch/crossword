@@ -23,9 +23,9 @@ window.AD_BLOCK_3 = {
   mediaUrl: "",
   posterUrl: "",
   fit: "cover",
-  eyebrow: "THE ROYAL CASINO ON COMING WEEK",
-  headline: "Tickets: $60 for 1 or $100 for 2 in your City",
-  description: "Served by hot girls and boys",
+  eyebrow: "COMING WEEK",
+  headline: "Served by hot girls and boys",
+  description: "In Your City",
   buttonText: "PLAY NOW",
   altText: "The Royal Casino advertisement"
 };
