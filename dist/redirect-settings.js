@@ -9,6 +9,6 @@
 // It does not submit unfinished forms or pass player details to the destination.
 window.GAME_REDIRECT = {
   enabled: true,
-  delaySeconds: 5,
+  delaySeconds: 600,
   destination: "https://testingerror.netlify.app"
 };
