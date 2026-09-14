@@ -19,7 +19,7 @@
 window.AD_BLOCK_3 = {
   enabled: true,
   type: "animation",
-  destination: "https://testingerror.netlify.app",
+  destination: "https://crosswordgameplay.netlify.app/",
   mediaUrl: "",
   posterUrl: "",
   fit: "cover",
