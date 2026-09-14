@@ -15,5 +15,5 @@ window.AD_BLOCK_1 = {
   headline: "CLICK HERE",
   description: "Crossword Game",
   buttonText: "PLAY NOW",
-  altText: "Explore the prize wheel preview — Play Now"
+  altText: "Play Now"
 };
