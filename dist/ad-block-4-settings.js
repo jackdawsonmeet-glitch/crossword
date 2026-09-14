@@ -16,7 +16,7 @@
 window.AD_BLOCK_4 = {
   enabled: true,
   type: "animation", // "animation", "image", or "video"
-  destination: "https://crosswordgameplay.netlify.app/",
+  destination: "https://www.wordgames.com/crossword/",
   mediaUrl: "",
   posterUrl: "",
   fit: "cover",
