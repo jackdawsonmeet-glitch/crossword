@@ -7,7 +7,7 @@
 // Headline, description, buttonText and altText are editable.
 // Only advertise prizes when the offer and terms are real and accurate.
 window.AD_BLOCK_1 = {
-  enabled: true,
+  enabled: false,
   type: "animation",
   destination: "https://www.wordgames.com/",
   mediaUrl: "",
