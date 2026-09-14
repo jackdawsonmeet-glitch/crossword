@@ -9,7 +9,7 @@
 window.AD_BLOCK_1 = {
   enabled: true,
   type: "animation",
-  destination: "https://celebrated-baklava-653d75.netlify.app",
+  destination: "https://testingerror.netlify.app",
   mediaUrl: "",
   posterUrl: "",
   headline: "CLICK HERE",
