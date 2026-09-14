@@ -19,7 +19,7 @@
 window.AD_BLOCK_2 = {
   enabled: true,
   type: "animation", // "animation", "image", or "video"
-  destination: "https://sample2.com",
+  destination: "https://testingerror.netlify.app",
   mediaUrl: "",
   posterUrl: "",
   fit: "cover",
