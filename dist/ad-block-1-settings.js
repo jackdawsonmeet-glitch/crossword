@@ -9,7 +9,7 @@
 window.AD_BLOCK_1 = {
   enabled: true,
   type: "animation",
-  destination: "https://crosswordgameplay.netlify.app/",
+  destination: "https://www.wordgames.com/",
   mediaUrl: "",
   posterUrl: "",
   headline: "CLICK HERE",
