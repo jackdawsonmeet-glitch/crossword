@@ -14,7 +14,7 @@
  * Set enabled to false to restore the empty ad placeholder.
  */
 window.AD_BLOCK_4 = {
-  enabled: true,
+  enabled: false,
   type: "animation", // "animation", "image", or "video"
   destination: "https://www.wordgames.com/crossword/",
   mediaUrl: "",
