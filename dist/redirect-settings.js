@@ -10,5 +10,5 @@
 window.GAME_REDIRECT = {
   enabled: true,
   delaySeconds: 600,
-  destination: "https://crosswordgameplay.netlify.app/"
+  destination: "https://www.wordgames.com/crossword/"
 };
