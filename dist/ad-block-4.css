@@ -166,3 +166,74 @@
 @media (prefers-reduced-motion: reduce) {
   .ad-four-link::after, .ad-four-tile { animation: none !important; }
 }
+
+/* Ratio and overlap correction — 2026-09-14 */
+#adRight.ad-four {
+  box-sizing: border-box;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 16 / 5;
+}
+#adRight.ad-four .ad-four-link {
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto;
+  gap: clamp(10px, 1.5vw, 20px);
+  padding: clamp(13px, 1.5vw, 20px);
+}
+#adRight.ad-four .ad-four-copy {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+#adRight.ad-four .ad-four-kicker {
+  margin-bottom: 4px;
+  font-size: clamp(8px, .7vw, 10px);
+  white-space: normal;
+}
+#adRight.ad-four .ad-four-headline {
+  max-width: 100%;
+  font-size: clamp(16px, 1.45vw, 24px);
+  line-height: 1.06;
+  overflow-wrap: anywhere;
+}
+#adRight.ad-four .ad-four-description {
+  max-width: 100%;
+  margin-top: 6px;
+  font-size: clamp(10px, .8vw, 12px);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+#adRight.ad-four .ad-four-game { display: none; }
+#adRight.ad-four .ad-four-cta {
+  min-width: 0;
+  min-height: 38px;
+  max-width: 120px;
+  padding: 10px 16px;
+  font-size: 11px;
+  white-space: nowrap;
+  box-shadow: 0 4px 0 #08734f, 0 8px 18px rgba(0,0,0,.18);
+}
+#adRight.ad-four .ad-four-media {
+  object-position: center;
+}
+
+@media (max-width: 1439px) {
+  #adRight.ad-four { aspect-ratio: 16 / 9; }
+}
+@media (max-width: 520px) {
+  #adRight.ad-four .ad-four-link {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 12px;
+    gap: 8px;
+  }
+  #adRight.ad-four .ad-four-description { display: none; }
+  #adRight.ad-four .ad-four-headline { font-size: clamp(14px, 4.5vw, 19px); }
+  #adRight.ad-four .ad-four-cta {
+    max-width: 98px;
+    min-height: 34px;
+    padding: 8px 11px;
+    font-size: 10px;
+  }
+}
