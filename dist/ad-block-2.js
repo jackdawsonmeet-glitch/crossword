@@ -20,32 +20,8 @@
   link.className = "ad-two-link";
   link.href = destination;
   link.rel = "sponsored";
-  link.setAttribute("aria-label", config.altText || "View featured offer");
+  link.setAttribute("aria-label", config.altText || "Learn more");
 
-  // Request fullscreen from the same trusted ad click before navigation.
-  // Browsers may exit fullscreen when a different website loads; the destination
-  // website must implement its own click-to-fullscreen behavior to remain fullscreen.
-  link.addEventListener("click", event => {
-    if (!event.isTrusted) return;
-    const root = document.documentElement;
-    const request = root.requestFullscreen || root.webkitRequestFullscreen;
-    if (!request || document.fullscreenElement || document.webkitFullscreenElement) return;
-    event.preventDefault();
-    let navigated = false;
-    const go = () => {
-      if (navigated) return;
-      navigated = true;
-      window.location.assign(destination);
-    };
-    try {
-      const result = request.call(root, { navigationUI: "hide" });
-      if (result && typeof result.then === "function") result.catch(() => {}).finally(go);
-      else go();
-      window.setTimeout(go, 500);
-    } catch {
-      go();
-    }
-  });
 
   const mediaUrl = safeUrl(config.mediaUrl);
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -61,7 +37,7 @@
     copy.className = "ad-two-copy";
     const kicker = document.createElement("span");
     kicker.className = "ad-two-kicker";
-    kicker.textContent = "ADVERTISEMENT · FEATURED OFFER";
+    kicker.textContent = "ADVERTISEMENT";
     const heading = document.createElement("h2");
     heading.className = "ad-two-headline";
     heading.textContent = config.headline;

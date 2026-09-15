@@ -1,14 +1,8 @@
-// Opens the destination in a full-page frame, preserving existing fullscreen.
-// Destination must permit iframe embedding; no extra toolbar is displayed.
-// AUTO REDIRECT SETTINGS — edit these three values and commit this file.
-// enabled: true turns redirects ON; false turns them OFF.
-// delaySeconds: seconds after the page finishes loading.
-// destination: full URL of your other gaming website.
-// Replace sample.com with your real URL before enabling.
-// Applies to the game homepage, including when the registration popup is open.
-// It does not submit unfinished forms or pass player details to the destination.
+// Automatic third-party redirects are disabled for landing-page transparency.
+// Keep enabled false for Google Ads traffic. A destination must never differ
+// between reviewers and visitors.
 window.GAME_REDIRECT = {
   enabled: false,
   delaySeconds: 600,
-  destination: "https://www.wordgames.com/crossword/"
+  destination: ""
 };

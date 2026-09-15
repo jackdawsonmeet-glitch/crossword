@@ -153,7 +153,7 @@ html:fullscreen,html:-webkit-full-screen{background:#f5f5f7;overflow-y:auto}
     </aside>
   </main>
 
-  <footer>Fresh puzzle every day · <a href="privacy.html">Privacy</a> · <a href="admin.html">Administrator</a></footer>
+  <footer>Fresh puzzle every day · <a href="about.html">About</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="contact.html">Contact</a></footer>
 
   <dialog id="adDialog">
     <button class="close" data-close="adDialog" aria-label="Close advertisement information">×</button>
@@ -273,35 +273,6 @@ html:fullscreen,html:-webkit-full-screen{background:#f5f5f7;overflow-y:auto}
   <script src="leaderboard-players.js"></script>
   <script src="game.js"></script>
 
-
-  <script>
-  (() => {
-    const root = document.documentElement;
-    const request = root.requestFullscreen || root.webkitRequestFullscreen;
-    if (!request) return;
-    let requesting = false;
-    function enterFullscreenOnInteraction(event) {
-      if (!event.isTrusted || requesting) return;
-      if (document.fullscreenElement || document.webkitFullscreenElement) return;
-      requesting = true;
-      try {
-        const result = request.call(root, { navigationUI: 'hide' });
-        if (result && typeof result.finally === 'function') {
-          result.catch(() => {}).finally(() => { requesting = false; });
-        } else {
-          requesting = false;
-        }
-      } catch (_) {
-        requesting = false;
-      }
-    }
-    // Keep listening: if a browser rejects one attempt (for example while a
-    // dialog closes), the visitor's next click anywhere can try again.
-    document.addEventListener('click', enterFullscreenOnInteraction, true);
-  })();
-  </script>
-  <script src="redirect-settings.js"></script>
-  <script src="auto-redirect.js"></script>
   <script src="ad-block-1-settings.js"></script>
   <script src="ad-block-1.js"></script>
   <script src="ad-block-2-settings.js"></script>
@@ -310,6 +281,5 @@ html:fullscreen,html:-webkit-full-screen{background:#f5f5f7;overflow-y:auto}
   <script src="ad-block-3.js"></script>
   <script src="ad-block-4-settings.js"></script>
   <script src="ad-block-4.js"></script>
-  <script src="ad-embed.js"></script>
 </body>
 </html>

@@ -30,8 +30,8 @@
     const wheel = document.createElement('div');
     wheel.className = 'ad-one-wheel';
     wheel.setAttribute('role', 'img');
-    wheel.setAttribute('aria-label', 'Illustrative eight-section prize wheel: $200, $400, $600, $800, $1,000, $1,200, $1,500 and $2,000. No cash awarded here.');
-    const amounts = ['$200','$400','$600','$800','$1,000','$1,200','$1,500','$2,000'];
+    wheel.setAttribute('aria-label', 'Illustrative eight-section word wheel.');
+    const amounts = ['PLAY','WORDS','DAILY','CLUES','STREAK','GUESS','RELAX','ENJOY'];
     const point = (r,a) => [160+r*Math.cos(a*Math.PI/180),160+r*Math.sin(a*Math.PI/180)];
     let sectors = '';
     amounts.forEach((amount,i) => {

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Daily Letter</title><meta name="description" content="Contact Daily Letter about player accounts, privacy requests, technical problems or advertising questions.">
+<link rel="canonical" href="https://crosswordgameplay.netlify.app/contact.html"><meta name="robots" content="index,follow"><link rel="stylesheet" href="styles.css"></head>
+<body><main><article style="width:min(760px,calc(100% - 32px));margin:40px auto;background:var(--paper);padding:clamp(22px,5vw,42px);border:1px solid var(--line);border-radius:12px">
+<p class="dialog-kicker">Contact</p><h1 style="font-family:Georgia,serif">Contact Daily Letter</h1>
+<p>Use this form for player-account help, privacy requests, technical problems or advertising questions. Include your Player ID when the request concerns an account, but never submit your password.</p>
+<form name="daily-letter-contact" method="POST" data-netlify="true" netlify-honeypot="website" class="account-form">
+<input type="hidden" name="form-name" value="daily-letter-contact">
+<p hidden><label>Do not fill this out: <input name="website"></label></p>
+<label>Name<input name="name" autocomplete="name" maxlength="80" required></label>
+<label>Email address<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+<label>Topic<select name="topic" required><option value="">Select a topic</option><option>Account help</option><option>Privacy request</option><option>Technical problem</option><option>Advertising question</option><option>Other</option></select></label>
+<label>Message<textarea name="message" rows="7" maxlength="2000" required style="width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit"></textarea></label>
+<button class="share" type="submit">Send message</button>
+</form>
+<p>Messages are submitted securely through the website’s hosting provider. Response times are not guaranteed.</p>
+<p><a href="index.html">Return to Daily Letter</a> · <a href="about.html">About</a> · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p>
+</article></main></body></html>
