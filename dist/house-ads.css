@@ -1,0 +1,148 @@
+/* Truthful Daily Letter house ads.
+   These cards promote only existing site features and use internal destinations. */
+.house-ad-slot {
+  container-type: size;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  overflow: hidden;
+}
+.house-ad-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(7px, 1.4cqh, 14px);
+  padding: clamp(14px, 4cqw, 24px);
+  overflow: hidden;
+  border: 1px solid rgba(23, 50, 77, .12);
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(213, 160, 48, .16), transparent 30%),
+    linear-gradient(145deg, #ffffff 0%, #f5f7fa 56%, #edf3f8 100%);
+  box-shadow: 0 5px 22px rgba(23, 50, 77, .09);
+  color: #17324d;
+  text-align: center;
+  text-decoration: none;
+  isolation: isolate;
+}
+.house-ad-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,.75) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: house-ad-sheen 9s ease-in-out infinite;
+}
+.house-ad-label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: #6e6e73;
+  font-size: clamp(8px, 1.6cqw, 10px);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.house-ad-icon {
+  width: clamp(42px, 20cqw, 62px);
+  height: clamp(42px, 20cqw, 62px);
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #1e5277, #17324d);
+  box-shadow: 0 6px 16px rgba(23,50,77,.18);
+  color: #fff;
+  font-size: clamp(20px, 8cqw, 30px);
+  font-weight: 800;
+}
+.house-ad-copy { display: grid; gap: 5px; min-width: 0; }
+.house-ad-eyebrow {
+  color: #a45f2d;
+  font-size: clamp(9px, 1.8cqw, 11px);
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+.house-ad-headline {
+  color: #17324d;
+  font-size: clamp(15px, 7cqw, 24px);
+  line-height: 1.05;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.house-ad-description {
+  color: #59636e;
+  font-size: clamp(11px, 2.7cqw, 14px);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+.house-ad-button {
+  display: inline-flex;
+  min-height: 36px;
+  padding: 8px 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #17324d;
+  color: #fff;
+  font-size: clamp(10px, 2.4cqw, 13px);
+  font-weight: 750;
+}
+.house-ad-card:hover { border-color: rgba(23,50,77,.28); transform: translateY(-1px); }
+.house-ad-card:focus-visible { outline: 3px solid #0071e3; outline-offset: 2px; }
+
+#adLeft .house-ad-card,
+#adRight .house-ad-card {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: clamp(10px, 2cqw, 22px);
+  padding: clamp(12px, 2cqw, 20px);
+  text-align: left;
+}
+#adLeft .house-ad-icon,
+#adRight .house-ad-icon {
+  width: clamp(42px, 9cqw, 64px);
+  height: clamp(42px, 9cqw, 64px);
+}
+#adLeft .house-ad-copy,
+#adRight .house-ad-copy { flex: 1; }
+#adLeft .house-ad-headline,
+#adRight .house-ad-headline { font-size: clamp(14px, 3cqw, 22px); }
+#adLeft .house-ad-description,
+#adRight .house-ad-description { font-size: clamp(10px, 1.55cqw, 14px); }
+#adLeft .house-ad-button,
+#adRight .house-ad-button { flex: 0 0 auto; }
+
+@container (max-height: 145px) {
+  .house-ad-description { display: none; }
+  .house-ad-card { gap: 7px; }
+}
+@container (max-width: 170px) {
+  .house-ad-description { display: none; }
+  .house-ad-button { padding-inline: 10px; }
+}
+@media (max-width: 760px) {
+  #adTowerLeft .house-ad-card,
+  #adTowerRight .house-ad-card {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .house-ad-label { top: 7px; left: 9px; }
+  .house-ad-description { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .house-ad-card,
+  .house-ad-card::after { animation: none; transition: none; }
+}
+@keyframes house-ad-sheen {
+  0%, 70%, 100% { transform: translateX(-120%); }
+  82% { transform: translateX(120%); }
+}
